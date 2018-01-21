@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Playstyle:</strong>
+  <%= @beacon.playstyle %>
+</p>
+
+<p>
+  <strong>Skill:</strong>
+  <%= @beacon.skill %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @beacon.region %>
+</p>
+
+<p>
+  <strong>Communication:</strong>
+  <%= @beacon.communication %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @beacon.comment %>
+</p>
+
+<p>
+  <strong>Player:</strong>
+  <%= @beacon.player_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @beacon.game_id %>
+</p>
+
+<%= link_to 'Edit', edit_beacon_path(@beacon) %> |
+<%= link_to 'Back', beacons_path %>

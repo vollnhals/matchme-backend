@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  playstyle: MyString
+  skill: MyString
+  region: MyString
+  communication: MyString
+  comment: MyText
+  player_id: 1
+  game_id: 1
+
+two:
+  playstyle: MyString
+  skill: MyString
+  region: MyString
+  communication: MyString
+  comment: MyText
+  player_id: 1
+  game_id: 1

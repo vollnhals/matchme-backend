@@ -1,0 +1,52 @@
+<%= form_for(beacon) do |f| %>
+  <% if beacon.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(beacon.errors.count, "error") %> prohibited this beacon from being saved:</h2>
+
+      <ul>
+      <% beacon.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :playstyle %>
+    <%= f.select :playstyle, Beacon::PLAYSTYLES %>
+  </div>
+
+  <div class="field">
+    <%= f.label :skill %>
+    <%= f.select :skill, Beacon::SKILLS %>
+  </div>
+
+  <div class="field">
+    <%= f.label :region %>
+    <%= f.select :region, Beacon::REGIONS %>
+  </div>
+
+  <div class="field">
+    <%= f.label :communication %>
+    <%= f.select :communication, Beacon::COMMUNICATIONS %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comment %>
+    <%= f.text_area :comment %>
+  </div>
+
+  <div class="field">
+    <%= f.label :player_id %>
+    <%= f.select :player_id, Player.pluck(:name, :id) %>
+  </div>
+
+  <div class="field">
+    <%= f.label :game_id %>
+    <%= f.select :game_id, Game.pluck(:name, :id) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
